@@ -7,12 +7,14 @@ export const pokemonSlice = createSlice({
         isLoadig: false,
     },
     reducers: {
-        increment: (state, /* action */ ) => {
-            state.counter += 1;
+        startLoadingPokemons: (state, /* action */ ) => {
+            state.isLoadig = true;
         },
+        setPokemons: (state, action) => {
+            console.log(action)
+        }
     }
 });
 
-
 // Action creators are generated for each case reducer function
-export const { increment } = pokemonSlice.actions;
+export const { startLoadingPokemons, setPokemons } = pokemonSlice.actions;``
